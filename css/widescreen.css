@@ -1,0 +1,18 @@
+/* this is styling for screens beyond 1100px */
+
+/* aligning the icons to the left of their  containers*/
+#what .container .items .item{
+    display: flex;
+    text-align: left;
+}
+/* styling icons */
+#what .container .items .item i{
+    margin: 1.3rem;
+    align-self: center;
+    margin-bottom: 0;
+}
+/* making the mapp bigger on small screens */
+
+#contact #map{
+    flex:2;
+}

@@ -1,0 +1,72 @@
+/* this is styling for screens below 768px */
+
+/* removing flex from items section to allow the elements to stack */
+#what .container .items{
+    display: block;
+}
+
+/* aligning the icons to the left of their  containers*/
+#what .container .items .item{
+    display: flex;
+    text-align: left;
+}
+/* styling icons */
+#what .container .items .item i{
+    margin: 1.3rem;
+    align-self: center;
+    margin-bottom: 0;
+}
+#contact{
+    flex-direction: column;
+}
+.maps{
+    border: ridge 1pt rgb(0, 0, 0);
+}
+/* media query to style elements in mobile view */
+
+@media screen and (max-width: 500px){
+    #navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    #navbar .logo{
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .showcase{
+        height: 95vh;
+    }
+    .showcase .showcase-content{
+    top:75px;
+    bottom: 0px;
+    /* border: solid 5pt red; */
+    }
+    #who{
+        display: block; /*with this block display applied, the image disappears because it has no height.*/
+    }
+    #who .who-img{
+        display: none; /*display none further enusres that the image won't appear at this screen width*/
+    }
+    #clients .container .items img{
+        width: 80%;
+    }
+    /*the next styling removes the last icon at mobile view display. We use the ':last-child' selector to target it.  */
+    #clients .container .items div:last-child{ 
+        display: none;
+    }
+    #contact{
+        flex-direction: column;
+    }
+    .maps{
+        border: ridge 1pt rgb(0, 0, 0);
+    }
+}
+@media screen and (max-height: 660px){
+    .showcase-content .l-heading{
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    } 
+    .showcase-content .lead{
+        font-size: 1.1rem;
+    }
+}
